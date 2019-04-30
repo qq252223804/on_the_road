@@ -4,7 +4,7 @@ import random
 import unittest
 import requests
 import warnings
-
+from my_fake_useragent import UserAgent  # 随机生成头部信息库
 
 # 这里登陆的方法不可放入class中 不然 unittest遇到test 命名的用例会执行一遍 后面用例调用login方法返回的内容又会登陆一遍
 def test_login():
@@ -14,8 +14,8 @@ def test_login():
     """
     data = {"username": "18657738815", "password": 123456}
     url = "http://pre-admin.mofangcar.com/cms/login"
-    headers = {
-        "User-Agent": " Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"}
+    headers = {"User-Agent":UserAgent().random()}
+        # "User-Agent": " Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"}
     res = requests.post(url, data=data, headers=headers, verify=False)
     print(res.json())
     # print(res.text)
