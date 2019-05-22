@@ -24,7 +24,7 @@ stdin, stdout, stderr = ssh.exec_command('docker ps')
 # 关闭连接
 lines=stdout.read().decode()
 
-A='10.100.2.41/we_eat_bugs/loan-market-testing-qd1'
+A='10.100.2.41/we_eat_bugs/loan-market-testing-qd'
 B='10.100.2.41/we_eat_bugs/open-gateway-testing-qd'
 C='10.100.2.41/we_eat_bugs/yyyq-app-bff-testing-qd'
 def write_text(msg):

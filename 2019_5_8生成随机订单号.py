@@ -12,7 +12,7 @@ import uuid
 
 
 uid=uuid.uuid1()
-suid = ''.join(str(uid).split('-'))[0:21]
+suid =''.join(str(uid).split('-'))[0:21]
 print(suid)
 
 
