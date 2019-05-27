@@ -33,3 +33,8 @@ namespace=path.split('//')[1].split('/')[0]
 html=path.split('//')[1].split('/')[1]
 data=query_data(namespace,html)
 print(data)
+
+#split 将字符串快速分割成一个列表
+a='I have a dream that my four little children'
+b=a.split(' ')
+print(b)
