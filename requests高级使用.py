@@ -86,3 +86,4 @@ class cmf_cms(unittest.TestCase):
         res = requests.get(url, params=data, cookies=self.cookies, verify=False)
         self.assertEqual(res.status_code, 200)
         print(res.json())
+        print(res.status_code)
