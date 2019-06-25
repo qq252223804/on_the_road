@@ -12,13 +12,14 @@ import uuid
 
 
 uid=uuid.uuid1()
-suid =''.join(str(uid).split('-'))[0:21]
+print(len(''.join(str(uid).split('-'))))
+suid =''.join(str(uid).split('-'))[0:27]
 print(suid)
 
 
 # 2.时间戳方式
 
 order_no = str(time.strftime('%Y%m%d%H%M%S', time.localtime(time.time())))+ str(time.time()).replace('.', '')[-7:]
-print(order_no)
+print(len(order_no))
 
-# print(time.time())
+print(str(time.time()).replace('.', ''))

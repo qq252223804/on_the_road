@@ -47,22 +47,29 @@ import time,random
 
 #带参数的装饰器函数
 # Python也支持带参数的装饰器，比如刚刚的cost_time加入一个报警机制，如果函数执行耗时大于3秒，就发出警告。
-def cost_time(warn=3):
-    def wrap(func):
-        def in_wrap(*args, **kwargs):
-            start_time = time.time()
-            result = func(*args, **kwargs)
-            cost = time.time() - start_time
-            print("cost time: {}".format(cost))
-            if cost > warn:
-                print("warning, cost time is {} !!!".format(cost))
-            return result
-        return in_wrap
-    return wrap
 
-@cost_time()
-def a_func():
-    time.sleep(random.randint(1, 5))
+def c(warm=4):
+    def a(func):
+        def b(*args, **kwargs):
+            start_time=time.time()
+            print("start_time {}".format(start_time))
+            run_time=func(*args, **kwargs)
+            end_time=time.time()-start_time
 
-a_func()
+            print("end_time: {}".format(end_time))
+            if end_time>warm:
+                print("休眠时间/运行时间大于警告时间")
 
+            return run_time
+
+        return b
+    return a
+
+@c()
+def d():
+    a=random.randint(1,5)
+    time.sleep(a)
+    print("随机休眠时间为:",a)
+
+
+d()
