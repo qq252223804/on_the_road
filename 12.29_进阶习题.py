@@ -90,10 +90,11 @@ import re
 a= 'not 404 found 张三 99 深圳'
 list=a.split(" ")
 print(list)
-res=re.findall('\d+|[a-zA-Z]+',a)  #去除数字跟字母 中间加连接符
+res=re.findall('\d+|[a-zA-Z]+',a)  #匹配数字跟字母
+print(res)
 for i in res:
 	if i in list:
 		list.remove(i)
-new_list=" ".join(list)
-print(res)
-print(new_list)
+print(list)
+str=" ".join(list)
+print(str)

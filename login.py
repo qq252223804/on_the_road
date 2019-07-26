@@ -39,8 +39,8 @@ class oper:
 		NUMM =0
 		if numm==True:
 			NUMM=self.numm
-			return NUMM
+
 		return NUMM
 
-# A=oper(3,1).get_numm(True)
-# print(A)
+A=oper(3,1).get_numm(True)
+print(A)

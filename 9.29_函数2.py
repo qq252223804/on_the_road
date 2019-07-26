@@ -57,7 +57,6 @@ class Crawl:
         print(dir(self))
         return '需要请求的url:{},对应解析xpath:{},爬虫对应的名字craw_name:{}'.format(*self.info)
 
-
 if __name__ == '__main__':
     user_info = [
         ('gang', 18, '上海'),

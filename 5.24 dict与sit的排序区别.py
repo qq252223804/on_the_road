@@ -7,7 +7,6 @@
 @software: PyCharm
 """
 
-
 # #字典的排序
 # ll={'b':1,'cc':6,'a':2}
 # print(ll.items())
@@ -22,47 +21,48 @@
 
 
 # 打印出 1.有多少种水果 2.有多少种不同价格
-products=[
-    ('柠檬一级',80),
-    ('柠檬一级',80),
-    ('柠檬二级',100),
-    ('苹果',50),
-    ('香蕉',30),
-    ('橘子',50),
+products = [
+    ('柠檬一级', 80),
+    ('柠檬一级', 80),
+    ('柠檬二级', 100),
+    ('苹果', 50),
+    ('香蕉', 30),
+    ('橘子', 50),
 
 ]
 
-#以list方式循环
+
+# 以list方式循环
 def find_product_price(products):
-    unique_product=[]
-    unique_price=[]
-    for  product,price in products:  #A
-        if product not in unique_product:#B
+    unique_product = []
+    unique_price = []
+    for product, price in products:  # A
+        if product not in unique_product:  # B
             unique_product.append(product)
         if price not in unique_price:
             unique_price.append(price)
-    return unique_product,len(unique_product),len(unique_price)
+    return unique_product, len(unique_product), len(unique_price)
+
 
 print('unique product is() and count of unique product and price is {} '.format(find_product_price(products)))
+
 
 # #以set 方式循环
 
 def check_product_price(products):
     unique_product = set()
     unique_price = set()
-    for product,price in products:
+    for product, price in products:
         unique_product.add(product)
         unique_price.add(price)
     for i in products:
         if max(unique_price) in i:
-            print('最贵的水果及价格为:'+str(i))
-    return unique_product,len(unique_product),len(unique_price)
+            print('最贵的水果及价格为:' + str(i))
+    return unique_product, len(unique_product), len(unique_price)
+
+
 #
 # print('count of unique product and price is {} and {}'.format(check_product_price(products)[2],check_product_price(products)[3]))
 # print('不同水果名称为:{}'.format(check_product_price(products)[1]))
 # print('最贵的水果价格为：{}'.format(check_product_price(products)[0]))
 print('unique product is() and count of unique product and price is {} '.format(check_product_price(products)))
-
-
-
-

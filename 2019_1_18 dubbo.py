@@ -22,7 +22,7 @@ if __name__=="__main__":
     Port = 28008  # Doubble服务端口
     interface = 'com.zrj.pay.trade.api.QueryTradeService'  # 接口
     method = 'tradeDetailQuery'  # 方法
-    param = '{"message": "HelloWorld"}'  # 参数
+    param = {"message": "HelloWorld"}  # 参数
     data=coondoubble_data(Host,Port,interface,method,param)
     print(data)
 
