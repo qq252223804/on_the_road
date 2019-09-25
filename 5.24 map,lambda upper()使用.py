@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 @author: taojian
-@file: 5.24 map,lambda 高阶函数使用.py
+@file: 5.24 map,lambda upper()使用.py
 @time: 2019/5/24 15:08
 @software: PyCharm
 """
@@ -26,11 +26,24 @@ print(c)
 print(d)
 
 
-
+# map(func,parmters)
 # upper 与lower使用
-def format_name(s):
+def list_toUpper(s):
+    # print(s[0:1],s[1:])
     s1=s[0:1].upper()+s[1:].lower()
     return s1
-print (list(map(format_name, ['adam', 'LISA', 'barT'])))
+print (list(map(list_toUpper, ['adam', 'LISA', 'barT'])))
 
+def str_toUpper(str):
+    #将句子使用split切割为list数组
+    split_list=str.split()
+    # 遍历列表长度值
+    for i in range(len(split_list)):
+        # 使用capitalize()函数将每个单词首字母转为大写
+        split_list[i]=split_list[i].capitalize()
+        # 使用join将列表转为字符串
 
+    split_list=" ".join(split_list)
+    return split_list
+content="hello world"
+print(str_toUpper(content))

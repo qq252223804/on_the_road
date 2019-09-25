@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*- 
 # @Time : 2018/12/28 17:16 
 # @Author : taojian 
-# @File : 12.29_进阶习题.py
+# @File : 12.29_yield re.py
 
 
 # 1.要求如下：给出以下购物列表，用户输入想要购买的物品，之后让用户输入想要购买该物品的数量，打印物品名、价格即数量。用户可循环输入
@@ -81,20 +81,23 @@
 
 # # 简化后
 def gen2():
-	yield from '文婷婷'
-	yield from '是傻逼'
-	yield from range (3)
+    yield from '文婷婷'
+    yield from '是傻逼'
+    yield from range(3)
+
+
 print(list(gen2()))
 
 import re
-a= 'not 404 found 张三 99 深圳'
-list=a.split(" ")
+
+a = 'not 404 found 张三 99 深圳'
+list = a.split(" ")
 print(list)
-res=re.findall('\d+|[a-zA-Z]+',a)  #匹配数字跟字母
+res = re.findall('\d+|[a-zA-Z]+', a)  # 匹配数字跟字母
 print(res)
 for i in res:
-	if i in list:
-		list.remove(i)
+    if i in list:
+        list.remove(i)
 print(list)
-str=" ".join(list)
+str = " ".join(list)
 print(str)

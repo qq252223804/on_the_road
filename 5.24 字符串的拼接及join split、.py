@@ -30,6 +30,7 @@ path='https://abs/index.html'
 def query_data(namespace,html):
     return namespace,html
 namespace=path.split('//')[1].split('/')[0]
+print(namespace)
 html=path.split('//')[1].split('/')[1]
 data=query_data(namespace,html)
 print(data)

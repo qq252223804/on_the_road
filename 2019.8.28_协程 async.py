@@ -39,6 +39,7 @@ def main(urls):
 
 if __name__ == '__main__':
     start = time.perf_counter()
+    print(start)
     main(['url_1','url_2','url_3'])
     All_time=time.perf_counter()-start
-    print(All_time)
+    print('Wall_time:{:.2f}'.format(All_time))
