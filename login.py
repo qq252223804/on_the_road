@@ -42,5 +42,5 @@ class oper:
 
 		return NUMM
 
-A=oper(3,1).get_numm(True)
+A=oper(5,1).get_numm(True)
 print(A)
