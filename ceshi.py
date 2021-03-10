@@ -19,7 +19,7 @@ class Ceshi:
 	
 	@staticmethod
 	def get_DATA2(Data):     #Data
-		data = Login(66,1).login1()
+		data = Login(65,1).login1()
 		Data+=data
 		print(Data)
 	
