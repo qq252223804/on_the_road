@@ -13,19 +13,19 @@ class Ceshi:
 	
 	@staticmethod    #引用其他类的静态 方法 不需要标明self
 	def get_DATA():
-		data=Login(3,1).login1()
+		data=Login(353,1).login1()
 	
 		print(data)
 	
 	@staticmethod
 	def get_DATA2(Data):     #Data
-		data = Login(5,1).login1()
+		data = Login(66,1).login1()
 		Data+=data
 		print(Data)
 	
 	@staticmethod
 	def get_DATA3():
-		data=Login(5,1).login2()
+		data=Login(6,1).login2()
 
 		print(data)
 
