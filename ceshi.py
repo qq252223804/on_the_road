@@ -19,17 +19,17 @@ class Ceshi:
 	
 	@staticmethod
 	def get_DATA2(Data):     #Data
-		data = Login(3,1).login1()
+		data = Login(5,1).login1()
 		Data+=data
 		print(Data)
 	
 	@staticmethod
 	def get_DATA3():
-		data=Login(3,1).login2()
+		data=Login(5,1).login2()
 
 		print(data)
 
-# Ceshi.get_DATA()
+Ceshi.get_DATA()
 # Ceshi.get_DATA2(2)
 # Ceshi.get_DATA3()
 Login.ceshi()
